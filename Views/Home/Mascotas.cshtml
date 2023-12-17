@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/themes/7.0.2/default/default-main.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2023.3.1114/js/kendo.all.min.js"></script>
+    <link href="https://kendo.cdn.telerik.com/2022.1.119/styles/kendo.default.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2022.1.119/js/kendo.all.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex">
+            <div><h1>Usuario 1</h1></div>
+            <div></div>
+        </div>
+
+        <div id="pet-list"></div>
+
+      
+    </div>
+</body>
+</html>
+
+<script type="text/x-kendo-template" id="template">
+    <button class="card" style="width:18rem; border:1px solid; text-align:center;height:fit-content; margin-bottom:1rem;">
+        <div class="card-body">
+            <h3>#:name#</h3>
+        </div>
+    </button>
+</script>
+
+<script>var mascotas = [
+    { id: 1, name: "Mascota 1" },
+    { id: 2, name: "Mascota 1" },
+    { id: 3, name: "Mascota 1" },
+    { id: 4, name: "Mascota 1" },
+    { id: 5, name: "Mascota 1" },
+    { id: 6, name: "Mascota 1" },
+    { id: 7, name: "Mascota 1" },
+    //{ id: 8, name: "Mascota 1" },
+    //{ id: 9, name: "Mascota 1" },
+    ];
+
+    $("#pet-list").kendoListView({
+        dataSource: {
+            data: mascotas
+        },
+        template: kendo.template($("#template").html()),
+        pageable: false,
+        height: 450,
+        scrollable: "endless",
+    });</script>
+
+<style>
+
+    body {
+        background-color: rgba(220, 199, 170, .25)
+    }
+
+    .k-listview-content {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+    }
+
+    #pet-list {
+        padding: 1rem;
+        border: none;
+        background-color: transparent;
+    }
+
+    .btn-new-mas {
+        background-color: #F7C331;
+        width: 30%;
+        color: white;
+        height: 40px;
+    }
+</style>

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/themes/7.0.2/default/default-main.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2023.3.1114/js/kendo.all.min.js"></script>
+    <link href="https://kendo.cdn.telerik.com/2022.1.119/styles/kendo.default.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2022.1.119/js/kendo.all.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+</head>
+<body>
+    <div class="container" style="width:60%">
+        <div style="text-align:center;"><h1>Candy</h1></div>
+        <div class="mt-1">
+            <div>Información:</div>
+            <div>
+                <div>Nombre: </div>
+                <div>Edad: </div>
+                <div>Raza: </div>
+                <div>Tipo: </div>
+            </div>
+        </div>
+        <div class="mt-1">
+            <div id="tratamientos-grid"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var gridData = [
+        { fecha: "10 Dic 2023", peso: "10Kl", tratamiento: "vacuna", cita:"01 Ene 2024" },
+        { fecha: "10 Dic 2023", peso: "20Kl", tratamiento: "vacuna", cita: "01 Ene 2024" },
+        { fecha: "10 Dic 2023", peso: "5Kl", tratamiento: "vacuna", cita: "01 Ene 2024" }
+    ];
+
+    $("#tratamientos-grid").kendoGrid({
+        dataSource: {
+            data: gridData,
+            pageSize: 10 // Number of rows per page
+        },
+        columns: [
+            { field: "fecha", title: "Fecha"},
+            { field: "peso", title: "Peso"},
+            { field: "tratamiento", title: "Tratamiento"},
+            { field: "cita", title: "Próxima Cita"},
+        ],
+        pageable: true // Enable pagination
+    });
+</script>
+
+
+<style>
+
+    body {
+        background-color: rgba(220, 199, 170, .25)
+    }
+</style>

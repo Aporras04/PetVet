@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PetVet</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PetVet.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="d-flex height-100vh">
+        <div class="width-50 center-content" style="background-color: rgb(220, 199, 170, .4);">
+            <div class="d-flex justify-content-center flex-column text-center width-50">
+                <div class="mb-4 fs-2 weight-600">Bienvenido</div>
+                <div class="text-start mb-2">
+                    <div class="weight-600">Email</div>
+                    <input class="width-100 input-inicio" />
+                </div>
+                <div class="text-start">
+                    <div class="weight-600">Contraseña</div>
+                    <input class="width-100 input-inicio" />
+                </div>
+                <div class="text-end mb-2 fs-08">
+                    <span>Olvidaste la contraseña?</span>
+                </div>
+                <div class="mb-2">
+                    <button class="btn-inicio" onclick="IniciarSesion()">Iniciar Sesión</button>
+                </div>
+                <div class="d-flex fs-08 flex-column">
+                    <div>Nuevo en PetVet?</div>
+                    <div><a>Crear Cuenta</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="width-50 img-container" style="">
+            <div>
+                <img src="~/Image/Icono_blanco.png" />
+            </div>
+            <div>
+                <img width="90%" src="~/Image/portada.png" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    body {
+        margin: 0 !important;
+    }
+
+    header{
+        display:none;
+    }
+
+    .width-50 {
+        width: 50%;
+    }
+
+    .width-100 {
+        width: 100%;
+    }
+
+    .height-100vh {
+        height: 100vh;
+    }
+
+    .center-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mb-4 {
+        margin-bottom: 4rem;
+    }
+
+    .mb-2 {
+        margin-bottom: 2rem !important;
+    }
+
+    .weight-600 {
+        font-weight: 600;
+    }
+
+    .fs-08 {
+        font-size: 0.8rem;
+    }
+
+    .input-inicio {
+        border-radius: 8px;
+        height: 40px;
+    }
+
+    .btn-inicio {
+        width: 80%;
+        height: 40px;
+        border-radius: 8px;
+        background-color: rgb(107, 122, 143, .4);
+        border-color: rgb(107, 122, 143, .4);
+    }
+
+    .img-container {
+        background-color: #6B7A8F;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+</style>
+
+<script>
+    function IniciarSesion() {
+        console.log("Entro");
+    }
+</script>
